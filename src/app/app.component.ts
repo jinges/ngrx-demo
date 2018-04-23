@@ -8,32 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  public firstNum: number;
-  public secdNum: number;
-  public result: number;
-  public math = '+'
+  public content = '';
+  public math = '+';
+  public keyboards = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '.', '0', '='];
+  public maths = ['C', '/', 'x', '-', '+'];
 
-  changeFirstNum(val): void {
-    if (!isNaN(val)) {
-      this.firstNum = parseFloat(val);
+  keyboardFun(val){
+    if(val == 'C') {
+      const str = this.content;
+      this.content = str.substring(0, str.length - 1)
+      return;
     }
-    if (!isNaN(this.secdNum)) {
-      this.result = this.compute(this.math, this.firstNum , this.secdNum);
+    if(/\D/.test(val) && /\D/.test(this.content)) {
+      debugger
     }
-  }
+    this.content += val
 
-  changeSecdNum(val): void {
-    if (!isNaN(val)) {
-      this.secdNum = parseFloat(val);
-    }
-    if (!isNaN(this.firstNum)) {
-      this.result = this.compute(this.math, this.firstNum, this.secdNum);
-    }
-  }
-
-  changeMathFun(val){
-    this.math = val;
-    this.result = this.compute(this.math, this.firstNum, this.secdNum);
   }
 
   compute(math, first, secd){
