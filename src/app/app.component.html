@@ -8,18 +8,6 @@
 
 
 <section class="calculator">
-  <header class="result">
-    <p>{{result}}</p>
-    <p>{{content}}</p>
-  </header>
-  <article class="keyboard grid">
-    <ul class="cell grid number wrap">
-      <li *ngFor="let num of keyboards"
-       (click)="keyboardFun(num)">{{num}}</li>
-    </ul>
-    <ul class="maths grid">
-      <li *ngFor="let item of maths"
-       (click)="keyboardFun(item)">{{item}}</li>
-    </ul>
-  </article>
+  <app-monitor></app-monitor>
+  <app-keyboard></app-keyboard>
 </section>

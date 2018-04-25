@@ -1,0 +1,30 @@
+.keyboard {
+  background: #d9dbde;
+}
+
+.keyboard .number {
+  /* background: #ff0; */
+  width: 80vw;
+}
+
+.keyboard .number>li {
+  width: 33.33%;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+
+.keyboard .maths {
+  width: 20vw;
+  text-align: center;
+  font-size: 2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  flex-direction: column;
+}
+
+.keyboard li:active {
+  background: #b9b9b9;
+}
+

@@ -2,49 +2,6 @@
  * @Author: 大明冯
  * @Date: 2018-04-23 14:58:40
  * @Last Modified by: 大明冯
- * @Last Modified time: 2018-04-23 18:25:37
+ * @Last Modified time: 2018-04-24 18:23:45
  */
-.calculator .result p {
-  display: block;
-  width: 100%;
-  height: 3.4rem;
-  line-height: 3.4rem;
-  font-size: 2rem;
-  text-align: right;
-  padding: .2rem .8rem;
-  overflow: auto;
-}
-.result input{
-  height: 2rem;
-  line-height: 2rem;
-  display: block;
-  width: 100%;
-}
 
-.calculator .keyboard {
-  background: #d9dbde;
-}
-.calculator .number {
-  /* background: #ff0; */
-  width: 80vw;
-}
-.keyboard .number > li{
-  width: 33.33%;
-  text-align: center;
-  height: 4rem;
-  line-height: 4rem;
-  font-size: 2rem;
-}
-
-.keyboard .maths {
-  width: 20vw;
-  text-align: center;
-  font-size: 2rem;
-  height: 3.2rem;
-  line-height: 3.2rem;
-  flex-direction: column;
-}
-
-.keyboard li:active {
-  background: #b9b9b9;
-}
