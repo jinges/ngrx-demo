@@ -13,11 +13,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class CalculatorPipe implements PipeTransform {
-  evil(fn){
-    return new Function('return '+ fn)();
+  evil(fn) {
+    return new Function('return ' + fn)();
   }
-  transform(content: Array<String>) {
-    debugger;
-    return this.evil(content.join(''))
-  };
-};
+  transform(content: string) {
+    if (!content.length) {
+      return 0;
+    }
+    if (/\D/.test(content.substr(-1))) {
+      content = content.substr(0, content.length - 1);
+    }
+    content = content.replace(/x/g, '*');
+    return this.evil(content);
+  }
+}

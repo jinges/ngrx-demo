@@ -13,14 +13,14 @@ export const COMPUTERESULT = '[Result] Compute';
 
 
 
-export interface calculator {
+export interface calculatorAttr {
   content: String;
   compute: Boolean;
 }
 
 export class WriteContentAction implements Action {
   type = WRITECONTENT;
-  constructor(public payload: calculator) {
+  constructor(public payload: calculatorAttr) {
     this.payload = payload;
   }
 }
@@ -28,14 +28,14 @@ export class WriteContentAction implements Action {
 export class DeleteContentAction implements Action {
   type = DELETCONTENT;
 
-  constructor(public payload: calculator = {content: '', compute: false}) {
+  constructor(public payload: calculatorAttr = {content: '', compute: true}) {
     this.payload = payload;
   }
 }
 
 export class ComputeResultAction implements Action {
   type = COMPUTERESULT;
-  constructor(public payload: calculator = {content: '', compute: true}) {
+  constructor(public payload: calculatorAttr = {content: '', compute: true}) {
     this.payload = payload;
   }
 }

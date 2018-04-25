@@ -15,10 +15,10 @@ export function reducer(calculator: calculator = { content: [''], compute: false
     case Calculator.WRITECONTENT:
       return { content: [...calculator.content, ...[action.payload.content]], compute: action.payload.compute};
     case Calculator.DELETCONTENT:
-      calculator.content.pop()
+      calculator.content.pop();
       return calculator;
     case Calculator.COMPUTERESULT:
-      return {...calculator, ...{compute: true}}
+      return {...calculator, ...{compute: true}};
     default:
       return calculator;
   }

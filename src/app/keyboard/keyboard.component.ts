@@ -11,55 +11,39 @@ import { debug } from 'util';
 })
 export class KeyboardComponent implements OnInit {
 
-  constructor(public store: Store<fromRoot.State>) {
-
-  }
-
-  ngOnInit() {
-
-  }
-
   public content = '';
   public math = '+';
   public keyboards = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '.', '0', '='];
   public maths = ['C', '/', 'x', '-', '+'];
+  public compute = false;
+
+  constructor(public store: Store<fromRoot.State>) {
+
+  }
+
+  ngOnInit() {}
 
   keyboardFun(val) {
-    let compute = false;
-    if (val == 'C') {
+    if (val === 'C') {
       this.store.dispatch(new DeleteContentAction());
-      var content = this.content;
+      const content = this.content;
       this.content = content.substring(0, content.length - 1);
       return;
     }
-    debugger;
 
     if (/\D/.test(val) && /\D/.test(this.content.split('').pop())) {
       return;
     }
 
     if ((/\D/.test(val) && /\D/.test(this.content)) || val === '=') {
-      compute = true;
+      this.compute = true;
       this.store.dispatch(new ComputeResultAction());
     }
 
     if (val === '=') {
       return;
     }
-    this.content += val
-    this.store.dispatch(new WriteContentAction({content: val, compute}))
-  }
-
-  compute(math, first, secd) {
-    switch (math) {
-      case '+':
-        return first + secd;
-      case '-':
-        return first - secd;
-      case 'x':
-        return first * secd;
-      case '/':
-        return first / secd;
-    }
+    this.content += val;
+    this.store.dispatch(new WriteContentAction({ content: val, compute: this.compute }));
   }
 }

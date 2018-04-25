@@ -13,7 +13,7 @@ export class MonitorComponent implements OnInit {
   public result: Observable<any>;
 
   constructor(public store: Store<fromRoot.State>) {
-    this.content = store.select(fromRoot.getContentState)
+    this.content = store.select(fromRoot.getContentState);
     this.result = store.select(fromRoot.getResultState);
   }
 
