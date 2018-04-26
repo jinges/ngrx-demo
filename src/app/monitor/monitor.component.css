@@ -1,11 +1,14 @@
+.result{
+  height: 30vh;
+}
 .result p {
   display: block;
   width: 100%;
-  height: 3.4rem;
-  line-height: 3.4rem;
-  font-size: 2rem;
+  height: 15vh;
+  line-height: 15vh;
+  font-size: 3rem;
   text-align: right;
-  padding: .2rem .8rem;
+  padding: 0 .8rem;
   overflow: auto;
 }
 

@@ -1,5 +1,8 @@
 .keyboard {
   background: #d9dbde;
+  bottom: 0;
+  position: absolute;
+  height: 70vh;
 }
 
 .keyboard .number {
@@ -10,17 +13,17 @@
 .keyboard .number>li {
   width: 33.33%;
   text-align: center;
-  height: 4rem;
-  line-height: 4rem;
-  font-size: 2rem;
+  height: 17.5vh;
+  line-height: 17.5vh;
+  font-size: 2.6rem;
 }
 
 .keyboard .maths {
   width: 20vw;
   text-align: center;
-  font-size: 2rem;
-  height: 3.2rem;
-  line-height: 3.2rem;
+  font-size: 2.6rem;
+  height: 14vh;
+  line-height: 14vh;
   flex-direction: column;
 }
 

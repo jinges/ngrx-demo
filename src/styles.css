@@ -6,7 +6,12 @@
   list-style: none;
   box-sizing: border-box;
 }
-
+body{
+  width: 100%;
+  max-width: 768px;
+  display: block;
+  margin: auto;
+}
 .grid {
   display: -webkit-flex;
   display: -webkit-box;
