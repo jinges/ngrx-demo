@@ -2,7 +2,6 @@
 
  最近学习了redux,想写个demo练习下，顺便就写了这个计算器。只是为了加深记忆
 
-![示例图](src/assets/screencut.png '示例图')
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
